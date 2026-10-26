@@ -9,9 +9,9 @@ terraform {
 }
 
 provider "proxmox" {
-  endpoint = "https://192.168.0.116:8006"
+  endpoint = "https://x.x.x.x:8006"
   # Авторизация через API-токен (рекомендуется)
-  api_token = "api@pve!api=78451c6d-ae9b-459f-908e-6054ffc7204a"
+  api_token = "api@pve!api=x-x-x-x"
   # Отключить проверку SSL, если используется самоподписанный сертификат
   insecure  = true
 
