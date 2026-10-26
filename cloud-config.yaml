@@ -1,6 +1,17 @@
 #cloud-config
+
+users:
+  - default # Сохраняет стандартного пользователя дистрибутива (например, ubuntu или debian)
+  - name: test # Имя вашего нового пользователя
+    groups: sudo, admin
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL' # Разрешает выполнять sudo без ввода пароля
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMuGuk/pWne2gae3AV7TA6fmHzTClHxHcSvjEJ987jwq mitrofanov
+
 package_update: true
 package_upgrade: false
+disable_root: false
 
 packages:
   - qemu-guest-agent

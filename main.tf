@@ -89,10 +89,5 @@ network_device {
         address = "dhcp"
       }
     }
-
-    user_account {
-      username = "ubuntu"
-      keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMuGuk/pWne2gae3AV7TA6fmHzTClHxHcSvjEJ987jwq mitrofanov" ]
-    }
   }
 }
